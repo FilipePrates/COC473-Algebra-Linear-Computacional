@@ -48,8 +48,7 @@ vector<double> readVectorFile(string nomefile) {
     return B;
 }
 
-// Função para cálculo do erro relativo
-double erroRelativo(vector<double> X, vector<double> XX) {
+double relError(vector<double> X, vector<double> XX) {
     double erro = 0;
     for (int i = 0; i < X.size(); i++) {
         double erro_i = abs((X[i] - XX[i]) / X[i]);
@@ -76,7 +75,7 @@ vector<double> jacobi(matriz A, vector<double> B, int maxIter, double tol) {
             }
             X[i] = (B[i] - soma) / A.elements[i][i];
         }
-        erro = erroRelativo(X, XX);
+        erro = relError(X, XX);
         iter++;
     }
     if (iter == maxIter) {
@@ -106,7 +105,7 @@ vector<double> gaussSeidel(matriz A, vector<double>
             }
             X[i] = (B[i] - soma1 - soma2) / A.elements[i][i];
         }
-        erro = erroRelativo(X, XX);
+        erro = relError(X, XX);
         iter++;
     }
     if (iter == maxIter) {

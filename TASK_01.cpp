@@ -157,7 +157,6 @@ int main() {
         cout << "Por favor respeite as opções disponíveis." << endl;
         return -1;
     }
-    cout << "Resultado :" << endl;
     for (int i = 0; i < X.size(); i++) {
         cout << "x_" << i+1 << " = " << X[i] << endl;
     }
