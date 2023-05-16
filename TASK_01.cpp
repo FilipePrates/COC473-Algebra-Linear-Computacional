@@ -152,7 +152,7 @@ int main() {
         X = solveLU(LU, B);
     } else if (function == 2) {
         matriz L = cholesky(A);
-        X = resolverSistemacholesky(L, B);
+        X = solveCholesky(L, B);
     } else {
         cout << "Por favor respeite as opções disponíveis." << endl;
         return -1;
