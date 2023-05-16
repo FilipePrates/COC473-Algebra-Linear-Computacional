@@ -107,7 +107,7 @@ matriz cholesky(matriz A) {
     return L;
 }
 
-vector<double> resolverSistemacholesky(matriz L, vector<double> B) {
+vector<double> solveCholesky(matriz L, vector<double> B) {
     int n = NUM_LINES;
     vector<double> X(n);
     vector<double> Y(n);
