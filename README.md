@@ -15,3 +15,11 @@ g++ -o Main2 TASK_02.cpp
 ```
 ./Main2
 ```
+
+```
+g++ -o Main3 TASK_03.cpp
+```
+
+```
+./Main3
+```
